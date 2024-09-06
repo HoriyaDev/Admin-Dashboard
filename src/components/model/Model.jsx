@@ -17,7 +17,7 @@ const Model = ({ open, onClose, playerHeading, playersList }) => {
       onClick={onClose}
     >
       <div
-        className="relative bg-white rounded-lg shadow dark:bg-gray-700 w-[1200px] pb-4" // Added bottom padding here
+        className="relative top-0 bg-white rounded-lg shadow dark:bg-gray-700 w-[1200px] pb-4" // Added bottom padding here
         onClick={handleModalClick}
       >
         <div className='flex justify-between p-3'>

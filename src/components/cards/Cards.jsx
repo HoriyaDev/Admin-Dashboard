@@ -29,7 +29,7 @@ const Cards = ({ cardData }) => {
               > View details</button>} */}
               
               {index === 2 &&
-              <button  className="text-blue-800" type="button"                     onClick={handleModelOpen}
+              <button  className="text-blue-800" type="button" onClick={handleModelOpen}
 >
   View Details
 </button>}
