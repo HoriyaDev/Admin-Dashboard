@@ -679,4 +679,35 @@ export const tournamentHeading = [{
    src: "pic4.jpg"
   }
 ];
+export const ranking = [
+  {
+    victory:"Victories: ", 
+    defeat:"Defeats: ",
+    wining:"Wining Ratio: ",
+    total:"Total Matches: "
+
+
+}]
+
+export const partner = [
+  {
+    id:"01",
+    src:"pic3.jpg",
+    name:"Cheyenne Ekstrom",
+    wins: "89% wins"
+  },
+  {
+    id:"02",
+    src:"pic4.jpg",
+    name:"Lydia Westervelt",
+    wins:" 82% wins"
+  },
+  {
+    id:"01",
+    src:"pic7.jpg",
+    name:"Adison Torff",
+    wins:" 88% wins"
+  },
+
+]
 

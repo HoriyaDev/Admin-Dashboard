@@ -10,9 +10,9 @@ const Header = () => {
    
   return (
     <> 
-      <div className='relative flex justify-between bg-red-200 pt-2 px-20'>
+      <div className='relative flex justify-between bg-red-200 pt-2 px-10 rounded-2xl'>
         <div>
-          <img src='Logo.png' className='object-contain' alt="Logo"/>
+          <img src='Logo.png' className='object-contain mr-20' alt="Logo"/>
         </div>
         <div className='flex justify-evenly'>
           <img src='Profile.jpg' className='h-12 w-12 rounded-full object-cover m-2' alt="Profile"/>
