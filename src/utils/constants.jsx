@@ -711,3 +711,66 @@ export const partner = [
 
 ]
 
+export const RankingPlayers = [
+  {
+    id: "01",
+    src: "pic3.jpg",
+    name: "Cheyenne Ekstrom",
+    wins: "89% "
+  },
+  {
+    id: "02",
+    src: "pic3.jpg",
+    name: "Lydia Westervelt",
+    wins: "82% "
+  },
+  {
+    id: "03",
+    src: "pic3.jpg",
+    name: "Adison Torff",
+    wins: "88% "
+  },
+  {
+    id: "04",
+    src: "pic3.jpg",
+    name: "Zane McGregor",
+    wins: "76% "
+  },
+  {
+    id: "05",
+    src: "pic3.jpg",
+    name: "Aliza Finn",
+    wins: "91% "
+  },
+  {
+    id: "06",
+    src: "pic3.jpg",
+    name: "Mateo Reyes",
+    wins: "85% "
+  },
+  {
+    id: "07",
+    src: "pic3.jpg",
+    name: "Janelle Johnson",
+    wins: "83% "
+  },
+  {
+    id: "08",
+    src: "pic3.jpg",
+    name: "Miles Everett",
+    wins: "79% "
+  },
+  {
+    id: "09",
+    src: "pic3.jpg",
+    name: "Ruby Harrington",
+    wins: "92% "
+  },
+  {
+    id: "10",
+    src: "pic3.jpg",
+    name: "Leo Williams",
+    wins: "87% "
+  }
+];
+

@@ -14,7 +14,7 @@ const EditProfile = ({ open, onClose }) => {
             onClick={onClose}
         >
             <div
-                className="relative bg-white rounded-lg shadow dark:bg-gray-700 w-[700px] p-5 overflow-hidden"
+                className="relative bg-white rounded-lg shadow dark:bg-gray-700 w-[600px]  h-[580px] p-5 overflow-hidden"
                 onClick={handleContentClick}
             >
                 <div className='flex justify-between items-center'>
@@ -24,32 +24,32 @@ const EditProfile = ({ open, onClose }) => {
                     </button>
                 </div>
 
-                <img src='pic3.jpg' className='w-32 h-32 rounded-full object-cover mx-auto mt-10' />
+                <img src='pic3.jpg' className='w-20 h-20 rounded-full object-cover mx-auto mt-2' />
 
                 <div className='flex justify-between mt-10'>
                     <div className='flex flex-col'>
                         <label htmlFor='name' className='mb-2'>Name</label>  
-                        <input type='text' id='name' name='name' placeholder='Name' className='w-[300px] p-2 rounded-full focus:outline-none border-blue-gray-100 border-2' />
+                        <input type='text' id='name' name='name' placeholder='Name' className='w-[270px] p-2 rounded-full focus:outline-none border-blue-gray-100 border-2' />
                     </div>
                     <div className='flex flex-col'>
                         <label htmlFor='lastName' className='mb-2'>Last Name</label>
-                        <input type='text' id='lastName' name='lastName' placeholder='Last Name' className='w-[300px] p-2 rounded-full focus:outline-none border-blue-gray-100 border-2' />
+                        <input type='text' id='lastName' name='lastName' placeholder='Last Name' className='w-[270px] p-2 rounded-full focus:outline-none border-blue-gray-100 border-2' />
                     </div>
                 </div>
 
                 <div className='flex flex-col mt-4'>
                     <label htmlFor='email' className='mb-2'>Email</label>
-                    <input type='email' id='email' name='email' placeholder='abc@gamil.com' className='w-[300px] p-2 rounded-full focus:outline-none border-blue-gray-100 border-2' />
+                    <input type='email' id='email' name='email' placeholder='abc@gamil.com' className='w-[270px] p-2 rounded-full focus:outline-none border-blue-gray-100 border-2' />
                 </div>
 
                 <div className='flex justify-between mt-10'>
                     <div className='flex flex-col'>
                         <label htmlFor='oldPassword' className='mb-2 font-semibold'>Change Password</label>  
-                        <input type='password' id='oldPassword' name='oldPassword' placeholder='Old Password' className='w-[300px] p-2 rounded-full focus:outline-none border-blue-gray-100 border-2' />
+                        <input type='password' id='oldPassword' name='oldPassword' placeholder='Old Password' className='w-[270px] p-2 rounded-full focus:outline-none border-blue-gray-100 border-2' />
                     </div>
                     <div className='flex flex-col'>
                         <label htmlFor='newPassword' className='mb-8'></label>
-                        <input type='password' id='newPassword' name='newPassword' placeholder='New Password' className='w-[300px] p-2 rounded-full focus:outline-none border-blue-gray-100 border-2' />
+                        <input type='password' id='newPassword' name='newPassword' placeholder='New Password' className='w-[270px] p-2 rounded-full focus:outline-none border-blue-gray-100 border-2' />
                     </div>
                 </div>
 

@@ -36,10 +36,10 @@ const Profile = () => {
            </div>
 
            <div className='flex '> 
-            <button type='button' className='bg-blue-400  px-4 rounded-3xl'><CiEdit /></button>
-            <button type='button'  className='bg-gray-200 text-red-500 rounded-full px-2 py-1'>Delete Profile</button>
-            <button type='button'  className='bg-yellow-800 rounded-full px-2 py-2'>Send Warning</button>
-            <button type='button'  className='bg-blue-400 rounded-full px-[120px] mt-4 py-2 ml-32'>View Matches</button>
+            <button type='button' className='bg-blue-400 mt-5 px-4 rounded-3xl'><CiEdit size={'25px'}/></button>
+            <button type='button'  className='bg-gray-200 text-red-500 ml-3 px-4 mt-4 rounded-full '>Delete Profile</button>
+            <button type='button'  className='bg-yellow-800 rounded-full mt-5 ml-4 px-4 '>Send Warning</button>
+            <button type='button'  className='bg-blue-400 rounded-full px-[120px] mt-4 py-2 ml-12 '>View Matches</button>
         </div>
 
         </div>

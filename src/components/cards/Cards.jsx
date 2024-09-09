@@ -1,10 +1,19 @@
 import React, { useState } from 'react';
 import Model from '../model/Model';
-import { useSearchParams } from 'react-router-dom';
+import RankingModel from '../model/RankingModel';
 import { playersList, tournamentList, playerCardData,  playerHeading, tournamentHeading } from '../../utils/constants';
 const Cards = ({ cardData }) => {
 
   const [open, setOpen] = useState(false);
+  const [openRanking , setOpenRanking] = useState(false)
+  const handleRankingModel = ()=>{
+    setOpenRanking(true)
+  }
+  
+  const handleRankingClose = () => {
+    
+    setOpenRanking(false)
+  };
 
   const handleModelOpen = () => {
     setOpen(true);
@@ -12,6 +21,7 @@ const Cards = ({ cardData }) => {
 
   const handleModelClose = () => {
     setOpen(false);
+    
   };
   return (
     <>
@@ -19,15 +29,6 @@ const Cards = ({ cardData }) => {
         {cardData.map((item, index) => (
           <div key={index} className='bg-gray-50 w-[300px] h-[150px] p-5 rounded-xl'>
             <div className='flex justify-between'><h1>{item.h1}</h1>
-
-              {/* {index === 2 && <button
-                className='text-blue-700 '
-
-                onClick={handleModel}
-
-
-              > View details</button>} */}
-              
               {index === 2 &&
               <button  className="text-blue-800" type="button" onClick={handleModelOpen}
 >
@@ -51,7 +52,12 @@ const Cards = ({ cardData }) => {
         ))}
 
         <div className='bg-gray-50 p-5 w-[350px] rounded-xl'>
+          <div className='flex justify-between'>
           <h1>Alpha Padel Players Ranking</h1>
+          <button  className='text-blue-800'
+          onClick={ handleRankingModel}
+          >View All</button>
+          </div>
           <div className='flex bg-white justify-evenly mt-2'>
             <h1>01</h1>
             <img src='pic3.jpg' className='h-10 w-10 rounded-full object-cover ml-4' alt='player' />
@@ -67,7 +73,8 @@ const Cards = ({ cardData }) => {
         </div>
       </div>
 
-      <Model open={open} onClose={handleModelClose}  playerHeading={playerHeading}  playersList={playersList}     />
+      <Model open={open} onClose={handleModelClose}  playerHeading={playerHeading}  playersList={playersList} />
+      <RankingModel openRanking={openRanking} onCloseRanking={handleRankingClose} />
     </>
   );
 };

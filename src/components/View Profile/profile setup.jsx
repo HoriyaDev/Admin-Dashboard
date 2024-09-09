@@ -4,7 +4,7 @@ import React from 'react';
 const ProfileSetup = () => {
   return (
     <div>
-      <div className="relative bg-blue-100 w-[350px] rounded-2xl h-[230px] text-center mt-28">
+      <div className="relative bg-blue-100 w-[350px] rounded-2xl h-[230px] text-center mt-32">
       
         <div className="absolute inset-x-0 top-[-40%] flex justify-center">
           <div className="relative flex flex-col w-40 h-40 opacity-90 p-1 bg-gradient-to-b from-black to-yellow-400 rounded-full  items-center justify-center ">
