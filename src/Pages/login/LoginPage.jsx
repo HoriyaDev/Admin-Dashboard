@@ -20,20 +20,19 @@ const LoginPage = () => {
     }));
   };
 
-  const handleLogin = (e) =>{
-    e.preventDefault()
-    const loggedData = JSON.parse(localStorage.getItem("user"))
-    if(input.email===loggedData.email && input.password === loggedData.password) {
-      localStorage.setItem("logged" ,true )
-      navigate('/dashboard')
-    }
-    else{
-      alert("inCorrect")
-    }
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const loggedData = JSON.parse(localStorage.getItem("user"));
+  
     
-   
-
+    if (loggedData && input.email === loggedData.email && input.password === loggedData.password) {
+      localStorage.setItem("logged", "true"); 
+      navigate('/dashboard');
+    } else {
+      alert("Incorrect email or password");
+    }
   }
+  
   
 
   // function validateEmail(email) {
@@ -146,6 +145,7 @@ const LoginPage = () => {
         />
         {/* <p className='text-red-700 ml-5'>{passwordError}</p> */}
         <button 
+        type='button'
           className='absolute inset-y-0 right-8 text-blue-700 z-20'
           onClick={handleShow}
         >
@@ -160,7 +160,7 @@ const LoginPage = () => {
         Login
       </button>
 
-      <div>
+      <div className='mt-5 text-center'>
         <p>Don't have an account? 
           <Link to="/" className='font-bold'>
            Regitser Here
