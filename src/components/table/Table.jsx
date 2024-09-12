@@ -1,12 +1,12 @@
-
-import React, { useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Table = ({ playerData, playerHeading }) => {
   const navigate = useNavigate();
 
-  const handleNavigate = () => {
-    navigate('/profile');  // Use the correct path (lowercase "profile")
+  const handleNavigate = (person) => {
+    localStorage.setItem('selectedPerson', JSON.stringify(person)); 
+    navigate('/profile');
   };
 
   return (
@@ -41,7 +41,7 @@ const Table = ({ playerData, playerHeading }) => {
               <td>
                 <button
                   className="bg-white text-blue-600 rounded-full p-1 hover:bg-gray-200"
-                  onClick={handleNavigate}
+                  onClick={() => handleNavigate(item)} // Store the selected person in localStorage
                 >
                   View Profile
                 </button>
