@@ -1,12 +1,28 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import TournamentModel from '../model/TournamentModel';
 
 const Table = ({ playerData, playerHeading }) => {
+  const [selectedItem, setSelectedItem] = useState(null);
+  const [showTournamentModel, setShowTournamentModel] = useState(false);
   const navigate = useNavigate();
 
-  const handleNavigate = (person) => {
-    localStorage.setItem('selectedPerson', JSON.stringify(person)); 
-    navigate('/profile');
+  const handleNavigate = (item) => {
+    localStorage.setItem('selectedPerson', JSON.stringify(item));
+    localStorage.setItem('selectedTournament', JSON.stringify(item));
+    
+    if (item.playerName) {
+      navigate('/profile'); 
+    } else {
+      setSelectedItem(item);
+      setShowTournamentModel(true); 
+    }
+  };
+
+  const closeTournamentModel = () => {
+    setShowTournamentModel(false);
+    setSelectedItem(null);
   };
 
   return (
@@ -22,7 +38,7 @@ const Table = ({ playerData, playerHeading }) => {
               <th>{item.h5}</th>
               <th>{item.h6}</th>
               <th>{item.h7}</th>
-              <th>{item.h8}</th>
+              <th className="ml-10">{item.h8}</th> 
               <th>{item.h9}</th>
             </tr>
           ))}
@@ -40,18 +56,30 @@ const Table = ({ playerData, playerHeading }) => {
               <td>{item.lastLogin || ''}</td>
               <td>
                 <button
+                  type='button'
                   className="bg-white text-blue-600 rounded-full p-1 hover:bg-gray-200"
-                  onClick={() => handleNavigate(item)} // Store the selected person in localStorage
+                  onClick={() => handleNavigate(item)}
                 >
-                  View Profile
+                  {item.playerName ? "View Profile" : "View Details"}
                 </button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
+
+      {showTournamentModel && selectedItem && (
+        <TournamentModel item={selectedItem} onClose={closeTournamentModel} />
+      )}
     </div>
   );
 };
 
 export default Table;
+
+
+
+
+
+
+

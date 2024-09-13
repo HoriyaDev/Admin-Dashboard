@@ -238,6 +238,7 @@ export const tournamentList = [
     playerJoined: "8",
     address: "123 Stadium Avenue, City, Country",
     price: "$150",
+    createdBy: "Admin"
   },
   {
     id: 2,
@@ -248,6 +249,7 @@ export const tournamentList = [
     playerJoined: "10",
     address: "45 Court Street, City, Country",
     price: "$200",
+    createdBy: "Admin"
   },
   {
     id: 3,
@@ -258,6 +260,7 @@ export const tournamentList = [
     playerJoined: "15",
     address: "789 Park Lane, City, Country",
     price: "$100",
+    createdBy: "User123"
   },
   {
     id: 4,
@@ -268,6 +271,7 @@ export const tournamentList = [
     playerJoined: "6",
     address: "321 Arena Road, City, Country",
     price: "$250",
+    createdBy: "Admin"
   },
   {
     id: 5,
@@ -278,6 +282,7 @@ export const tournamentList = [
     playerJoined: "12",
     address: "654 Playground Boulevard, City, Country",
     price: "$50",
+    createdBy: "User456"
   },
   {
     id: 6,
@@ -288,6 +293,7 @@ export const tournamentList = [
     playerJoined: "14",
     address: "555 City Park, City, Country",
     price: "$120",
+    createdBy: "Admin"
   },
   {
     id: 7,
@@ -298,6 +304,7 @@ export const tournamentList = [
     playerJoined: "11",
     address: "222 Elite Road, City, Country",
     price: "$180",
+    createdBy: "User789"
   },
   {
     id: 8,
@@ -308,6 +315,7 @@ export const tournamentList = [
     playerJoined: "9",
     address: "999 Winter Avenue, City, Country",
     price: "$160",
+    createdBy: "Admin"
   },
   {
     id: 9,
@@ -318,6 +326,7 @@ export const tournamentList = [
     playerJoined: "17",
     address: "333 Summer Street, City, Country",
     price: "$70",
+    createdBy: "User123"
   },
   {
     id: 10,
@@ -328,6 +337,7 @@ export const tournamentList = [
     playerJoined: "8",
     address: "444 Autumn Lane, City, Country",
     price: "$220",
+    createdBy: "Admin"
   },
   {
     id: 11,
@@ -338,6 +348,7 @@ export const tournamentList = [
     playerJoined: "13",
     address: "555 Spring Boulevard, City, Country",
     price: "$190",
+    createdBy: "Admin"
   },
   {
     id: 12,
@@ -348,6 +359,7 @@ export const tournamentList = [
     playerJoined: "19",
     address: "666 Holiday Street, City, Country",
     price: "$130",
+    createdBy: "User789"
   },
   {
     id: 13,
@@ -358,6 +370,7 @@ export const tournamentList = [
     playerJoined: "21",
     address: "777 New Year Avenue, City, Country",
     price: "$60",
+    createdBy: "Admin"
   },
   {
     id: 14,
@@ -368,6 +381,7 @@ export const tournamentList = [
     playerJoined: "16",
     address: "888 Winter Street, City, Country",
     price: "$140",
+    createdBy: "Admin"
   },
   {
     id: 15,
@@ -378,7 +392,38 @@ export const tournamentList = [
     playerJoined: "9",
     address: "999 Pro Road, City, Country",
     price: "$210",
+    createdBy: "Admin"
+  }
+];
+
+ export const joinedPlayers = [
+  {
+    src: "pic3.jpg",
+    name: "John Doe",
+    text: "Win 12 out of 16 matches",
+    email: "john.doe@example.com",
+    licenseNumber: "AB123456",
+    telephone: "+1234567890",
+    winningRatio: "75%"
   },
+  {
+    src: "pic4.jpg",
+    name: "Jane Smith",
+    text: "Win 12 out of 16 matches",
+    email: "jane.smith@example.com",
+    licenseNumber: "XY987654",
+    telephone: "+0987654321",
+    winningRatio: "75%"
+  },
+  {
+    src: "pic5.jpg",
+    name: "Sam Johnson",
+    text: "Win 12 out of 16 matches",
+    email: "sam.johnson@example.com",
+    licenseNumber: "CD654321",
+    telephone: "+1122334455",
+    winningRatio: "75%"
+  }
 ];
 
   
@@ -558,6 +603,7 @@ export const tournamentHeading = [{
   h5:"Player Joined",
   h6:"Address ",
   h7:"Price",
+  h8:"Action"
 
 }]
 

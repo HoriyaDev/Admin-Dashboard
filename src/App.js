@@ -7,6 +7,7 @@ import Profile from './Pages/profile/Profile';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Register from './Pages/login/Register';
 import ProtectedRoute from './Services/ProtectedRoute';
+import TournamentModel from './components/model/TournamentModel';
 
 function App() {
   return (
@@ -35,6 +36,14 @@ function App() {
               </ProtectedRoute>
             } 
           />
+          {/* <Route 
+           path="/tournament" 
+            element={
+              <ProtectedRoute>
+                <TournamentModel />
+              </ProtectedRoute>
+            } 
+          /> */}
 
         </Routes>
       </BrowserRouter>
