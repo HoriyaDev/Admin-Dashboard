@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { joinedPlayers } from '../../utils/constants'
+import Reimburse from '../model/Reimburse'
 
 
 const JoinedPlayer = () => {
-    
+const [open , setOpen] = useState(false)
+
+  const handleOpen = () =>{
+    setOpen(true)
+  }
+  const handleClose = () =>{
+    setOpen(false)
+  }
+
   return (
     <>
     <h1 className='font-medium'>Player that already joined</h1>
@@ -31,12 +40,12 @@ const JoinedPlayer = () => {
         <p><span className='font-medium'>Winning Ratio   </span>{item.winningRatio}</p>
       </div>
 
-      <button type='button' className='bg-yellow-900 text-white px-4 py-2 rounded-full'>Reimburse</button>
+      <button type='button' onClick={handleOpen} className='bg-yellow-900 text-white px-4 py-2 rounded-full'>Reimburse</button>
     </div>
   </div>
 ))}
 
-    
+    <Reimburse open = {open} onClose={handleClose} />
     </>
   )
 }

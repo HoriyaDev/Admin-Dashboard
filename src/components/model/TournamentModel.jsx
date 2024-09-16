@@ -3,9 +3,19 @@ import React from 'react';
 import { IoIosArrowRoundBack } from "react-icons/io";
 import JoinedPlayer from '../joined Player/JoinedPlayer';
 import { useNavigate } from 'react-router-dom'
+import EditTournamentDetails from './EditTournamentDetails';
+import { useState } from 'react';
 
 const TournamentModel = ({ item, onClose }) => {
 
+  const [open , setOpen] = useState(false)
+
+  const handleOpen = () =>{
+    setOpen(true)
+  }
+  const handleClose = () =>{
+    setOpen(false)
+  }
 
  
   return (
@@ -17,7 +27,7 @@ const TournamentModel = ({ item, onClose }) => {
             </button>
             <h1 className='font-semibold text-xl ml-4'> Tournament Details</h1>
           </div>
-          <button type='button' className='bg-blue-900 text-white px-5 py-2 rounded-3xl'>Edit Details</button>
+          <button type='button' onClick={handleOpen}  className='bg-blue-900 text-white px-5 py-2 rounded-3xl'>Edit Details</button>
         </div>
 
 
@@ -59,9 +69,7 @@ const TournamentModel = ({ item, onClose }) => {
 
 
         </div>
-
-        
-
+        <EditTournamentDetails open = {open} onClose={handleClose} />
       </div>
     </div>
   );
