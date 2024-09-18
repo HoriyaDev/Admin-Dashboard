@@ -14,8 +14,6 @@ const Header = () => {
     const getName = JSON.parse(localStorage.getItem('user'))
     console.log("🚀 ~ Header ~ getName:", getName)
     setName(getName.fname)
-
-    console.log("🚀 ~ Header ~ name:", getName)
    }, [])
     
 

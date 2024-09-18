@@ -102,9 +102,9 @@ const Register = () => {
     return isValid;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e,value) => {
     e.preventDefault();
-    
+    console.log("new user data ",e.target.value)
     if (Validation()) {
       localStorage.setItem("user", JSON.stringify(input));
       navigate('/login');
