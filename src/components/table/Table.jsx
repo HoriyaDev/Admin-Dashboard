@@ -115,7 +115,7 @@ const Table = ({ playerData, playerHeading }) => {
   };
 
   return (
-    <div className="overflow-y-auto h-64">
+    <div className="overflow-y-auto">
       <table className="table-auto bg-red-300 w-[1270px] mx-auto rounded-lg">
         <thead>
           {playerHeading.map((item, index) => (
