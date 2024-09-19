@@ -186,7 +186,7 @@ import { IoIosArrowRoundBack } from "react-icons/io";
 import JoinedPlayer from '../joined Player/JoinedPlayer';
 import EditTournamentDetails from './EditTournamentDetails';
 
-const TournamentModel = ({ item, onClose }) => {
+const TournamentModel = ({ item, onClose , onSave,selectedIndex }) => {
   const [open, setOpen] = useState(false);
   //const [data, setData] = useState(item);  
 
@@ -252,7 +252,7 @@ const TournamentModel = ({ item, onClose }) => {
         <div className='w-[1000px] h-[200px] mx-auto'>
           <JoinedPlayer />
         </div>
-        <EditTournamentDetails item={item} open={open} onClose={handleClose}  />
+        <EditTournamentDetails item={item} open={open} onClose={handleClose} onSave={onSave} selectedIndex={selectedIndex} />
       </div>
     </div>
   );
