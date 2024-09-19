@@ -57,7 +57,7 @@ import React, { useState } from 'react';
 import { IoSearch } from "react-icons/io5";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
-const TableHeader = ({ heading, onSearch }) => {
+const TableHeader = ({ heading, onSearch , onSelect }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
 
@@ -65,6 +65,13 @@ const TableHeader = ({ heading, onSearch }) => {
     const value = e.target.value;
     setSearchTerm(value);
     onSearch(value); 
+  };
+
+
+  const handleSelectChange = (e) => {
+    const value = parseInt(e.target.value); // Convert string to number
+    console.log("🚀 ~ handleArray ~ value:", value)
+    onSelect(value); // Pass the selected value to parent component
   };
 
   return (
@@ -81,10 +88,16 @@ const TableHeader = ({ heading, onSearch }) => {
         <IoSearch className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500' />
       </div>
       <div className='relative'>
-        <h1 className='bg-white w-36 p-2 rounded-full text-sm border border-blue-300'>show 10 rows</h1>
-        <button type='button'>
+        {/* <h1 className='bg-white w-36 p-2 rounded-full text-sm border border-blue-300'>show 10 rows</h1>
+        <button type='button '>
         <RiArrowDropDownLine size={'40px'} className='absolute inset-y-0 right-3' />
-        </button>
+        </button> */}
+
+<select onChange={handleSelectChange} className='border border-blue-300 p-2 rounded-lg'>
+          <option value={5}>Select 5 rows</option>
+          <option value={10}>Select 10 rows</option>
+          <option value={15}>Select 15 rows</option>
+        </select>
       </div>
     </div>
   );
