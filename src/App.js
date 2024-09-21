@@ -43,14 +43,7 @@ function App() {
               </ProtectedRoute>
             } 
           />
-          {/* <Route 
-           path="/tournament" 
-            element={
-              <ProtectedRoute>
-                <TournamentModel />
-              </ProtectedRoute>
-            } 
-          /> */}
+         
 
         </Routes>
       </BrowserRouter>

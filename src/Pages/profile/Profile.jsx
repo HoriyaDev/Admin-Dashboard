@@ -17,11 +17,19 @@ const Profile = () => {
  const [warningModel ,  setWarningModel] = useState(false)
  const navigate  = useNavigate()
  const location = useLocation();
- const { selectedPerson, selectedIndex } = location.state || {};
+const { selectedPerson, selectedIndex, onSaveEdit } = location.state || {};
 
- function handleNavigate() {
-    navigate('/dashboard');
-  }
+ const handleNavigate = () => {
+   navigate('/dashboard');
+ };
+
+ const handleSaveEdit = (updatedData) => {
+   if (onSaveEdit) {
+     onSaveEdit(updatedData);
+   }
+   navigate('/dashboard');
+ };
+
 
   const handleDeleteModel = () =>{
     setDeleteModel(true)
@@ -44,8 +52,7 @@ const Profile = () => {
  const handleClose =() =>{
   setOpenModel(false)
  }
-
-
+ 
  
   return (
     <>
@@ -75,11 +82,14 @@ const Profile = () => {
             <button type='button'  className='bg-blue-400 rounded-full px-[120px] mt-4 py-2 ml-12 '>View Matches</button>
         </div>
 
+       
+
         </div>
         <Edit
     open={openModel}
     onCloseModel={handleClose}
     selectedIndex={selectedIndex}
+    onSaveEdit={handleSaveEdit}
     // Pass the save handler
   />
 
