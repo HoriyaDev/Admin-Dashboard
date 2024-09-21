@@ -1,14 +1,10 @@
-import React, { useEffect, useState } from 'react';
+
+import React from 'react';
+import { useLocation } from 'react-router-dom';
 
 const ProfileSetup = () => {
-  const [person, setPerson] = useState(null);
-
-  useEffect(() => {
-    const storedPerson = localStorage.getItem('selectedPerson');
-    if (storedPerson) {
-      setPerson(JSON.parse(storedPerson)); 
-    }
-  }, []);
+  const location = useLocation();
+  const person = location.state?.selectedPerson; // Access the passed data
 
   return (
     <div>
@@ -38,3 +34,4 @@ const ProfileSetup = () => {
 };
 
 export default ProfileSetup;
+

@@ -10,12 +10,15 @@ import { CiEdit } from "react-icons/ci";
 import Edit from '../../components/model/Edit';
 import Delete from '../../components/model/Delete';
 import Warning from '../../components/model/Warning';
-
+import { useLocation } from 'react-router-dom';
 const Profile = () => {
   const [openModel , setOpenModel] = useState(false)
  const [deleteModel , setDeleteModel ] = useState(false)
  const [warningModel ,  setWarningModel] = useState(false)
  const navigate  = useNavigate()
+ const location = useLocation();
+ const { selectedPerson, selectedIndex } = location.state || {};
+
  function handleNavigate() {
     navigate('/dashboard');
   }
@@ -42,6 +45,8 @@ const Profile = () => {
   setOpenModel(false)
  }
 
+
+ 
   return (
     <>
       <Header />
@@ -71,7 +76,13 @@ const Profile = () => {
         </div>
 
         </div>
-        <Edit open={openModel} onCloseModel = {handleClose} />
+        <Edit
+    open={openModel}
+    onCloseModel={handleClose}
+    selectedIndex={selectedIndex}
+    // Pass the save handler
+  />
+
         <Delete open ={deleteModel}  onCloseModel={handleCloseDelete} />
         <Warning open={warningModel} onCloseModel={handleCloseWarning} />
         

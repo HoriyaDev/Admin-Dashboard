@@ -193,19 +193,7 @@ const TournamentModel = ({ item, onClose , onSave,selectedIndex }) => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  // const handleSave = (updatedData) => {
-   
-  //   localStorage.setItem("updatedData", JSON.stringify(updatedData));
-  //   setData(updatedData);  
-  // };
-
-  
-  // useEffect(() => {
-  //   const storedData = JSON.parse(localStorage.getItem("updatedData"));
-  //   if (storedData) {
-  //     setData(storedData);
-  //   }
-  // }, []);  // Empty dependency array ensures this runs once when the component mounts
+ 
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">

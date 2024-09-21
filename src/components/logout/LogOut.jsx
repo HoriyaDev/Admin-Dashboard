@@ -22,8 +22,8 @@ const LogOut = () => {
       setOpen(false);  
     };
     const handleLogOut = ()=>{
-      localStorage.removeItem("user")
-      localStorage.removeItem("logged");
+      // localStorage.removeItem("user")
+       localStorage.removeItem("logged");
       navigate('/login')
     }
 
