@@ -57,11 +57,6 @@ const DashBoard = () => {
     // setFilteredData(updatedPlayerData);
     setFilteredData(updatedPlayerData); // Update filtered data as well
 };
-
- 
-
- 
-
   return (
     <>
       <Header />

@@ -5,33 +5,28 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import TournamentModel from '../model/TournamentModel';
 
-const Table = ({ playerData, playerHeading ,onSaveEdit }) => {
+const Table = ({ playerData, playerHeading, onSaveEdit }) => {
   const [selectedItem, setSelectedItem] = useState(null);
   const [selectedIndex, setSelectedIndex] = useState(null)
   const [showTournamentModel, setShowTournamentModel] = useState(false);
-
-
   const [editedData, setEditedData] = useState(null);
   const navigate = useNavigate();
-
- 
-
-const handleNavigate = (item, i) => {
-  if (item.playerName) {
-    navigate('/profile', {
-      state: {
-        selectedPerson: item,
-        selectedIndex: i,
-      }
-    });
-    setSelectedItem(item);
-    setSelectedIndex(i);
-  } else {
-    setSelectedItem(item);
-    setSelectedIndex(i);
-    setShowTournamentModel(true);
-  }
-};
+  const handleNavigate = (item, i) => {
+    if (item.playerName) {
+      navigate('/profile', {
+        state: {
+          selectedPerson: item,
+          selectedIndex: i,
+        }
+      });
+      setSelectedItem(item);
+      setSelectedIndex(i);
+    } else {
+      setSelectedItem(item);
+      setSelectedIndex(i);
+      setShowTournamentModel(true);
+    }
+  };
 
   const handleSaveEditedData = (updatedData) => {
     // Find the item in playerData and update it
@@ -43,25 +38,12 @@ const handleNavigate = (item, i) => {
     setShowTournamentModel(false); // Close the modal
   };
 
-  
-
-  
-
-
-  
-
   const closeTournamentModel = () => {
     setShowTournamentModel(false);
     setSelectedItem(null);
   };
-
-
-
-
-
-
   return (
-    <div className="overflow-y-auto">
+        <div className="overflow-y-auto">
       <table className="table-auto bg-red-300 w-[1270px] mx-auto rounded-lg">
         <thead>
           {playerHeading.map((item, index) => (

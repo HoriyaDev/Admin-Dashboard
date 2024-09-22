@@ -162,7 +162,7 @@ const LoginPage = () => {
 
       <div className='mt-5 text-center'>
         <p>Don't have an account? 
-          <Link to="/" className='font-bold'>
+          <Link to="/register" className='font-bold'>
            Regitser Here
           </Link>
         </p>

@@ -10,7 +10,8 @@ const Register = () => {
     lname: "",
     profession: "",
     email: "",
-    password: ""
+    password: "",
+    image:""
   });
 
   const [error, setError] = useState({
@@ -107,7 +108,7 @@ const Register = () => {
     console.log("new user data ",e.target.value)
     if (Validation()) {
       localStorage.setItem("user", JSON.stringify(input));
-      navigate('/login');
+      navigate("/dashboard");
     }
   };
 
@@ -198,7 +199,7 @@ const Register = () => {
 
           <div className='flex mt-5 text-center justify-center'>
             <p>Already have an account?</p>
-            <Link to='/login' className='font-bold ml-1'>
+            <Link to='/' className='font-bold ml-1'>
               Login Here
             </Link>
           </div>
