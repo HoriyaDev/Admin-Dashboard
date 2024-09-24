@@ -332,7 +332,7 @@ const EditProfile = ({ open, onClose }) => {
                                 type='password'
                                 id='oldPassword'
                                 name='oldPassword'
-                                value={newData.oldPassword} // Corrected this to use oldPassword
+                                value={newData.password} 
                                 placeholder='Old Password'
                                 onChange={handleInputChange}
                                 className='w-[270px] p-2 rounded-full border-2'

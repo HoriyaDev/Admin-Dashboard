@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { BsEyeSlash, BsEyeFill } from "react-icons/bs";
-
+import { ToastContainer, toast, Slide } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Register = () => {
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
@@ -108,7 +109,20 @@ const Register = () => {
     console.log("new user data ",e.target.value)
     if (Validation()) {
       localStorage.setItem("user", JSON.stringify(input));
-      navigate("/");
+
+      toast.success("Sign up successfully !", {
+        position: "top-center",
+        autoClose: 2000,  // Duration of the toast (2 seconds)
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+    });
+      setTimeout(() => {
+        navigate("/");
+      }, 2000);
     }
   };
 
@@ -205,6 +219,8 @@ const Register = () => {
           </div>
         </div>
       </form>
+
+      <ToastContainer />
     </>
   );
 }

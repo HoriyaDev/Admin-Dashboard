@@ -27,10 +27,10 @@ const Profile = () => {
 
   const handleSaveEdit = (updatedData) => {
     if (onSaveEdit) {
-      onSaveEdit(updatedData);
+        onSaveEdit(updatedData);
     }
     navigate('/dashboard');
-  };
+};
 
   const handleOpenMatch = ()=>{
     setViewMatch(true)

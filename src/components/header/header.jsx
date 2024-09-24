@@ -82,7 +82,7 @@ const Header = () => {
 
   return (
     <>
-      <div className='relative flex justify-between bg-red-200 pt-2 px-10 rounded-2xl'>
+      <div className='relative flex justify-between w-[1340px] bg-red-200 pt-2 px-10 rounded-2xl'>
         <div>
           <img src='Logo.png' className='object-contain mr-20' alt="Logo"/>
         </div>

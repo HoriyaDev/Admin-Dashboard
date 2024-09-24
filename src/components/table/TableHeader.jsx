@@ -8,18 +8,18 @@
 // const TableHeader = ({heading , playerArray}) => {
 
 //     const [searchTerm, setSearchTerm] = useState(playerArray);
-    
+
 
 //     const handleSearch = () => {
 //         const filter = playerArray.filter((item) => 
 //             item.PlayerName.toLowerCase().includes(searchTerm.toLowerCase()) // Fixed includes and structure
 //         );
 //         console.log("🚀 ~ handleSearch ~ filter:", filter);
-        
+
 //         setSearchTerm(filter);
 //         console.log("🚀 ~ TableHeader ~ searchTerm:", searchTerm);
 //     };
-    
+
 
 //     return (
 //         <>
@@ -57,14 +57,14 @@ import React, { useState } from 'react';
 import { IoSearch } from "react-icons/io5";
 import { RiArrowDropDownLine } from "react-icons/ri";
 
-const TableHeader = ({ heading, onSearch , onSelect }) => {
+const TableHeader = ({ heading, onSearch, onSelect }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
 
   const handleSearchInput = (e) => {
     const value = e.target.value;
     setSearchTerm(value);
-    onSearch(value); 
+    onSearch(value);
   };
 
 
@@ -93,10 +93,12 @@ const TableHeader = ({ heading, onSearch , onSelect }) => {
         <RiArrowDropDownLine size={'40px'} className='absolute inset-y-0 right-3' />
         </button> */}
 
-<select onChange={handleSelectChange} className='border border-blue-300 p-2 rounded-lg'>
+        <select onChange={handleSelectChange} className='border border-blue-300 p-2 rounded-lg'>
+        
           <option value={5}>Select 5 rows</option>
           <option value={10}>Select 10 rows</option>
           <option value={15}>Select 15 rows</option>
+          
         </select>
       </div>
     </div>

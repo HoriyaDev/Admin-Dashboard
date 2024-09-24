@@ -51,10 +51,12 @@ const DashBoard = () => {
   };
 
   const onSaveEdit = (updatedData) => {
+    // Update playerData with the new data
     const updatedPlayerData = playerData.map((player) =>
         player.playerId === updatedData.playerId ? updatedData : player
     );
-    // setFilteredData(updatedPlayerData);
+
+    setPlayerData(updatedPlayerData); // Update player data
     setFilteredData(updatedPlayerData); // Update filtered data as well
 };
   return (
@@ -65,13 +67,13 @@ const DashBoard = () => {
           <button
             type='button'
             onClick={handlePlayers}
-            className={`ml-5 rounded-3xl ${activeButton === "players" ? 'bg-yellow-400 rounded px-6 -ml-0' : ''}`}
+            className={`ml-5 rounded-3xl ${activeButton === "players" ? 'bg-yellow-400 rounded px-6 -ml-3' : ''}`}
           >
             Players
           </button>
           <button
             onClick={handleTournament}
-            className={`rounded-3xl mr-5 ${activeButton === "tournament" ? 'bg-yellow-400 px-6 -mr-0' : ''}`}
+            className={`rounded-3xl mr-5 ${activeButton === "tournament" ? 'bg-yellow-400 px-6 -mr-3' : ''}`}
           >
             Tournament
           </button>
