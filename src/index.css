@@ -3,6 +3,33 @@
 @tailwind utilities;
 
 
+/* Custom Scrollbar Styles */
+.scrollbar-custom::-webkit-scrollbar {
+  width: 5px;
+  height: 5px; 
+  margin-right: -40px;/* Adjusted scrollbar height for a shorter scrollbar */
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: transparent; /* Track color matches the white background */
+  border-radius: 10px; /* Rounded scrollbar track */
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: #c5c4c4; /* Scrollbar thumb color */
+  border-radius: 10px; /* Rounded scrollbar thumb */
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+  background: #575656; /* Scrollbar thumb hover color */
+}
+
+/* Ensure scrollbar stays inside the white background */
+.scrollable-container {
+  padding-right: 10px; /* Add padding to avoid overlap */
+  margin-right: -30px; /* Prevent the scrollbar from pushing content */
+}
+
 
 body {
   margin: 0;

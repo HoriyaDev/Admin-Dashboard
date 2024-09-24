@@ -24,7 +24,7 @@ const LogOut = () => {
     const handleLogOut = ()=>{
       // localStorage.removeItem("user")
        localStorage.removeItem("logged");
-      navigate('/login')
+      navigate('/')
     }
 
   return (

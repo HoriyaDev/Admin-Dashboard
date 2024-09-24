@@ -61,17 +61,17 @@ const DashBoard = () => {
     <>
       <Header />
       <div className='bg-light-blue-900 w-[1320px] h-[1160px] relative rounded-3xl mx-auto'>
-        <div className='bg-white absolute mx-auto w-80 mt-5 ml-[500px] flex justify-between items-center rounded-3xl'>
+        <div className='bg-white absolute mx-auto w-72 mt-5 ml-[500px] flex justify-between items-center rounded-3xl'>
           <button
             type='button'
             onClick={handlePlayers}
-            className={`ml-5 rounded-3xl ${activeButton === "players" ? 'bg-yellow-400 rounded px-6 -ml-3' : ''}`}
+            className={`ml-5 rounded-3xl ${activeButton === "players" ? 'bg-yellow-400 rounded px-6 -ml-0' : ''}`}
           >
             Players
           </button>
           <button
             onClick={handleTournament}
-            className={`rounded-3xl mr-5 ${activeButton === "tournament" ? 'bg-yellow-400 px-6 -mr-3' : ''}`}
+            className={`rounded-3xl mr-5 ${activeButton === "tournament" ? 'bg-yellow-400 px-6 -mr-0' : ''}`}
           >
             Tournament
           </button>

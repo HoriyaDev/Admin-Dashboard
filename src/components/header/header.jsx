@@ -87,7 +87,7 @@ const Header = () => {
           <img src='Logo.png' className='object-contain mr-20' alt="Logo"/>
         </div>
         <div className='flex justify-evenly'>
-          <img src={image || 'pic4.jpg'} className='h-12 w-12 rounded-full object-cover m-2' alt="Profile"/>
+          <img src={ image|| 'pic5.jpg' } className='h-12 w-12 rounded-full object-cover m-2' alt="Profile"/>
           <div className='flex-col'>
             <h1 className='text-2xl font-bold'>{name}</h1>
             <p className='bg-blue-100 rounded-full w-20 text-center text-[12px]'>SuperAdmin</p>

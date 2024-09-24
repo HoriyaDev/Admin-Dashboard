@@ -108,7 +108,7 @@ const Register = () => {
     console.log("new user data ",e.target.value)
     if (Validation()) {
       localStorage.setItem("user", JSON.stringify(input));
-      navigate("/dashboard");
+      navigate("/");
     }
   };
 

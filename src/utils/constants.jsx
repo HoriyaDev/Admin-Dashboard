@@ -33,31 +33,6 @@ import { FaArrowDown } from "react-icons/fa6";
  ]
 
 
-//  export const tournamentCardData = [
-//   {   
-//       id: 1,
-//       h1: "Total Players",
-//       number: "25,300",
-//       text: "vs last month",
-//       src:"Line.png",
-//       icon: <FaArrowUp className='text-green-400' />
-//   },
-//   {   
-//       id: 2,
-//       h1: "Tournaments",
-//       number: "12,450",
-//       text:" vs last month " ,
-//         src:"_Chart.png",
-//         icon:<FaArrowDown className='text-red-400' />},
-//   {   
-//       id: 3,
-//       h1: "Reported Player",
-//       number: "220",
-//       text: "vs last month",
-//       src:"_Chart.png",
-//       icon:<FaArrowDown className='text-red-400' />
-//   },
-// ];
 
 
 export const playersList = [
@@ -429,160 +404,6 @@ export const tournamentList = [
   
   
   
-// export const tournamentList = [
-//   {
-//     playerName: "Liam Anderson",
-//     playerId: "#130001",
-//     ranking: "01",
-//     wins: "88%",
-//     preferences: "Left-handed",
-//     gender: "Male",
-//     email: "liamanderson@example.com",
-//     lastLogin: "05 FEB 2024",
-//   },
-//   {
-//     playerName: "Ella Thompson",
-//     playerId: "#130002",
-//     ranking: "02",
-//     wins: "84%",
-//     preferences: "Right-handed",
-//     gender: "Female",
-//     email: "ellathompson@example.com",
-//     lastLogin: "04 FEB 2024",
-//   },
-//   {
-//     playerName: "Noah Johnson",
-//     playerId: "#130003",
-//     ranking: "03",
-//     wins: "81%",
-//     preferences: "Left-handed",
-//     gender: "Male",
-//     email: "noahjohnson@example.com",
-//     lastLogin: "03 FEB 2024",
-//   },
-//   {
-//     playerName: "Ava Moore",
-//     playerId: "#130004",
-//     ranking: "04",
-//     wins: "85%",
-//     preferences: "Right-handed",
-//     gender: "Female",
-//     email: "avamoore@example.com",
-//     lastLogin: "05 FEB 2024",
-//   },
-//   {
-//     playerName: "Ethan Miller",
-//     playerId: "#130005",
-//     ranking: "05",
-//     wins: "79%",
-//     preferences: "Left-handed",
-//     gender: "Male",
-//     email: "ethanmiller@example.com",
-//     lastLogin: "06 FEB 2024",
-//   },
-//   {
-//     playerName: "Sophia Wilson",
-//     playerId: "#130006",
-//     ranking: "06",
-//     wins: "83%",
-//     preferences: "Right-handed",
-//     gender: "Female",
-//     email: "sophiawilson@example.com",
-//     lastLogin: "04 FEB 2024",
-//   },
-//   {
-//     playerName: "Oliver Martinez",
-//     playerId: "#130007",
-//     ranking: "07",
-//     wins: "78%",
-//     preferences: "Left-handed",
-//     gender: "Male",
-//     email: "olivermartinez@example.com",
-//     lastLogin: "03 FEB 2024",
-//   },
-//   {
-//     playerName: "Isabella Hernandez",
-//     playerId: "#130008",
-//     ranking: "08",
-//     wins: "80%",
-//     preferences: "Right-handed",
-//     gender: "Female",
-//     email: "isabellahernandez@example.com",
-//     lastLogin: "02 FEB 2024",
-//   },
-//   {
-//     playerName: "Mason Garcia",
-//     playerId: "#130009",
-//     ranking: "09",
-//     wins: "82%",
-//     preferences: "Left-handed",
-//     gender: "Male",
-//     email: "masongarcia@example.com",
-//     lastLogin: "05 FEB 2024",
-//   },
-//   {
-//     playerName: "Amelia Rodriguez",
-//     playerId: "#130010",
-//     ranking: "10",
-//     wins: "79%",
-//     preferences: "Right-handed",
-//     gender: "Female",
-//     email: "ameliarodriguez@example.com",
-//     lastLogin: "04 FEB 2024",
-//   },
-//   {
-//     playerName: "Lucas White",
-//     playerId: "#130011",
-//     ranking: "11",
-//     wins: "77%",
-//     preferences: "Left-handed",
-//     gender: "Male",
-//     email: "lucaswhite@example.com",
-//     lastLogin: "03 FEB 2024",
-//   },
-//   {
-//     playerName: "Charlotte Harris",
-//     playerId: "#130012",
-//     ranking: "12",
-//     wins: "86%",
-//     preferences: "Right-handed",
-//     gender: "Female",
-//     email: "charlotteharris@example.com",
-//     lastLogin: "02 FEB 2024",
-//   },
-//   {
-//     playerName: "Henry Clark",
-//     playerId: "#130013",
-//     ranking: "13",
-//     wins: "80%",
-//     preferences: "Left-handed",
-//     gender: "Male",
-//     email: "henryclark@example.com",
-//     lastLogin: "04 FEB 2024",
-//   },
-//   {
-//     playerName: "Grace Walker",
-//     playerId: "#130014",
-//     ranking: "14",
-//     wins: "83%",
-//     preferences: "Right-handed",
-//     gender: "Female",
-//     email: "gracewalker@example.com",
-//     lastLogin: "03 FEB 2024",
-//   },
-//   {
-//     playerName: "Jack King",
-//     playerId: "#130015",
-//     ranking: "15",
-//     wins: "81%",
-//     preferences: "Left-handed",
-//     gender: "Male",
-//     email: "jackking@example.com",
-//     lastLogin: "02 FEB 2024",
-//   },
-// ];
-
-
 export const playerHeading = [{
   h1:"Player",
   h2:"Player Id",
@@ -840,3 +661,9 @@ export const RankingPlayers = [
   }
 ];
 
+export const AllMatche = [
+  { id: 1, name: "John Doe", src: "pic3.jpg", percentage: "75%" },
+  { id: 2, name: "Jane Smith", src: "pic4.jpg", percentage: "85% "},
+  { id: 3, name: "Alice Johnson", src: "pic5.jpg", percentage: "90%" },
+  { id: 4, name: "Bob Brown", src: "pic6.jpg", percentage: "80%" }
+];
