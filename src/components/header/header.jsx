@@ -54,7 +54,6 @@
 
 
 
-
 import React, { useState, useEffect } from 'react';
 import { IoMdArrowDropdown } from "react-icons/io";
 import LogOut from '../logout/LogOut';
@@ -82,7 +81,7 @@ const Header = () => {
 
   return (
     <>
-      <div className='relative flex justify-between w-[1340px] bg-red-200 pt-2 px-10 rounded-2xl'>
+      <div className='relative flex justify-between w-[1348px] mx-auto bg-red-200 pt-2 px-10 rounded-2xl'>
         <div>
           <img src='Logo.png' className='object-contain mr-20' alt="Logo"/>
         </div>
@@ -96,8 +95,9 @@ const Header = () => {
             <IoMdArrowDropdown className='ml-3' />
           </button>
         </div>   
+        {open && <LogOut setName={setName} setImage={setImage} />}  
       </div>
-      {open && <LogOut />}  
+     
     </>
   );
 }

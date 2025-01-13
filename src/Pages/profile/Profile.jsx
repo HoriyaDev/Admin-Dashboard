@@ -66,7 +66,7 @@ const Profile = () => {
   return (
     <>
       <Header />
-      <div className="bg-blue-50 w-[1320px] h-[560px]  mx-auto rounded-xl">
+      <div className="bg-blue-50 w-[1320px] h-[560px]  max-h-[1000px]  mx-auto rounded-xl">
         <div className='flex justify-center '>
           <button type="button" className="bg-white mt-3 border-black border-2 px-7 py-2 rounded-full"
             onClick={handleNavigate}>

@@ -4,7 +4,9 @@ import './App.css';
 import LoginPage from './Pages/login/LoginPage';
 import DashBoard from './Pages/dashboard/DashBoard';
 import Profile from './Pages/profile/Profile';  
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {  Routes, Route } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
+
 import Register from './Pages/login/Register';
 import ProtectedRoute from './Services/ProtectedRoute';
 import TournamentModel from './components/model/TournamentModel';
@@ -19,7 +21,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           
           <Route path="/" element={<LoginPage />} />
@@ -47,7 +49,7 @@ function App() {
          
 
         </Routes>
-      </BrowserRouter>
+      </HashRouter >
     </>
   );
 }

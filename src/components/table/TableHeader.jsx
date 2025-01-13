@@ -59,7 +59,7 @@ import { RiArrowDropDownLine } from "react-icons/ri";
 
 const TableHeader = ({ heading, onSearch, onSelect }) => {
   const [searchTerm, setSearchTerm] = useState('');
-
+  const [showCount, setShowCount] = useState(15);
 
   const handleSearchInput = (e) => {
     const value = e.target.value;
@@ -71,15 +71,16 @@ const TableHeader = ({ heading, onSearch, onSelect }) => {
   const handleSelectChange = (e) => {
     const value = parseInt(e.target.value); // Convert string to number
     console.log("🚀 ~ handleArray ~ value:", value)
+    setShowCount(value)
     onSelect(value); // Pass the selected value to parent component
   };
 
   return (
-    <div className='flex justify-between items-center p-4'>
+    <div className='flex justify-between items-center  p-4'>
       <h1 className='text-lg font-bold'>{heading}</h1>
       <div className='relative ml-auto mr-6'>
         <input
-          type='search'
+          type='text'
           value={searchTerm}
           onChange={handleSearchInput}
           className='w-96 pl-10 pr-4 py-2 border border-blue-300 rounded-3xl focus:outline-none'
@@ -93,11 +94,11 @@ const TableHeader = ({ heading, onSearch, onSelect }) => {
         <RiArrowDropDownLine size={'40px'} className='absolute inset-y-0 right-3' />
         </button> */}
 
-        <select onChange={handleSelectChange} className='border border-blue-300 p-2 rounded-lg'>
+        <select value={showCount} onChange={handleSelectChange} className='border border-blue-300 p-2 rounded-lg'>
         
           <option value={5}>Select 5 rows</option>
           <option value={10}>Select 10 rows</option>
-          <option value={15}>Select 15 rows</option>
+          <option  value={15}>Select 15 rows</option>
           
         </select>
       </div>

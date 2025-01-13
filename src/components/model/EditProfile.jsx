@@ -189,7 +189,7 @@ import React, { useEffect, useState } from 'react';
 import { MdClose } from "react-icons/md";
 import { RiImageEditFill } from "react-icons/ri";
 
-const EditProfile = ({ open, onClose }) => {
+const EditProfile = ({ open, onClose,setName , setImage }) => {
     const defaultImage = 'pic4.jpg';
     const [newData, setNewData] = useState({
         fname: "",
@@ -214,7 +214,8 @@ const EditProfile = ({ open, onClose }) => {
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        setNewData((prevData) => ({
+           
+            setNewData((prevData) => ({
             ...prevData,
             [name]: value
         }));
@@ -241,6 +242,8 @@ const EditProfile = ({ open, onClose }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         localStorage.setItem('user', JSON.stringify(newData));
+        setImage(newData.image)
+        setName(newData.fname) 
         console.log("Updated data: ", newData);
         onClose(); // Close modal after saving
     };

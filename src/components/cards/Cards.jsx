@@ -27,7 +27,7 @@ const Cards = ({ cardData }) => {
     <>
       <div className='flex justify-evenly pt-10'>
         {cardData.map((item, index) => (
-          <div key={index} className='bg-gray-50 w-[300px] h-[150px] p-5 rounded-xl mt-10'>
+          <div key={index} className='bg-gray-50 w-[300px]  h-[150px] p-5 rounded-xl mt-10'>
             <div className='flex justify-between'><h1>{item.h1}</h1>
               {index === 2 &&
               <button  className="text-blue-800" type="button" onClick={handleModelOpen}
@@ -51,7 +51,7 @@ const Cards = ({ cardData }) => {
           </div>
         ))}
 
-        <div className='bg-gray-50 p-5 w-[350px] rounded-xl mt-10'>
+        <div className='bg-gray-50 p-5 w-[350px]  rounded-xl mt-10'>
           <div className='flex justify-between'>
           <h1>Alpha Padel Players Ranking</h1>
           <button  className='text-blue-800'

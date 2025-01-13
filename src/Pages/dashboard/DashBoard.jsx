@@ -34,6 +34,7 @@ const DashBoard = () => {
   const handleSearch = (search) => {
     if (search === "") {
       setFilteredData(playerData);
+      
     } else {
       const filtered = playerData.filter((item) =>
         // (item.playerName || item.tournamentName).toLowerCase().includes(search.toLowerCase())
@@ -62,18 +63,19 @@ const DashBoard = () => {
   return (
     <>
       <Header />
-      <div className='bg-light-blue-900 w-[1320px] h-[1160px] relative rounded-3xl mx-auto'>
-        <div className='bg-white absolute mx-auto w-72 mt-5 ml-[500px] flex justify-between items-center rounded-3xl'>
+      <div className='bg-light-blue-900 w-[1320px] z-0  h-[1160px] relative rounded-3xl mx-auto'>
+        <div className=' 
+bg-white absolute mx-auto w-72 mt-5 ml-[500px] flex justify-between items-center rounded-3xl px-5'>
           <button
             type='button'
             onClick={handlePlayers}
-            className={`ml-5 rounded-3xl ${activeButton === "players" ? 'bg-yellow-400 rounded px-6 -ml-3' : ''}`}
+            className={` rounded-3xl ${activeButton === "players" ? 'bg-yellow-400 rounded px-6 -ml-5' : ''}`}
           >
             Players
           </button>
           <button
-            onClick={handleTournament}
-            className={`rounded-3xl mr-5 ${activeButton === "tournament" ? 'bg-yellow-400 px-6 -mr-3' : ''}`}
+            onClick={handleTournament} 
+            className={`rounded-3xl  ${activeButton === "tournament" ? 'bg-yellow-400 px-6 -mr-5' : ''}`}
           >
             Tournament
           </button>
